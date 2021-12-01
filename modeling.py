@@ -8,7 +8,8 @@ import modeling_util
 class BertRanker(torch.nn.Module):
     def __init__(self):
         super().__init__()
-        self.BERT_MODEL = 'bert-base-uncased'
+        #self.BERT_MODEL = 'bert-base-uncased'
+        self.BERT_MODEL = "bert-base-multilingual-cased"
         self.CHANNELS = 12 + 1 # from bert-base-uncased
         self.BERT_SIZE = 768 # from bert-base-uncased
         self.bert = CustomBertModel.from_pretrained(self.BERT_MODEL)
